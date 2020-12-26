@@ -17,6 +17,24 @@ To reduce high CPU usage by Qemu:
   
 [Reference](https://www.reddit.com/r/VFIO/comments/80p1q7/high_kvmqemu_cpu_utilization_when_windows_10/)
 
+## 3. Enable VCPU Pinning.
+
+To avoid cache misses. We've CoreI5-7400 CPU, 4 Core, 1 Thread per Core. 
+Dedicated 2 Core for VM
+
+    <vcpu placement="static">2</vcpu>
+    <cputune>
+        <vcpupin vcpu="0" cpuset="0"/>
+        <vcpupin vcpu="1" cpuset="1"/>
+    </cputune>
+    
+    <cpu mode="host-passthrough" check="full">
+        <topology sockets="1" cores="2" threads="1"/>
+    </cpu>
+       
+  
+[Reference](https://leduccc.medium.com/improving-the-performance-of-a-windows-10-guest-on-qemu-a5b3f54d9cf5)
+
 
 # Network:
 
