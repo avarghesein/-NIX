@@ -36,6 +36,10 @@ Update your VM libvirt XML to reflect the same
     
 [Reference](https://superuser.com/questions/1210773/how-do-i-revert-to-latest-external-snapshot-in-kvm)
 
+If we've moved the backing file, update the snapshot to point to the new parent location:
+
+    qemu-img rebase -f qcow2 -u -b ./WIN10_PRO_X64_2020H2_BASE.qcow2  ./WIN10_PRO_X64_2020H2_CUSTOM
+
 # Key LibVirt folders, where the XML files resides
 
     /etc/libvirt/qemu
