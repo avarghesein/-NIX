@@ -62,4 +62,12 @@ If we've moved the backing file, update the snapshot to point to the new parent 
 
 
 
+# Direct MOUNT/EDIT Qcow2/VDI images in Host OS (Without VM)
 
+    sudo modprobe nbd max_part=8
+    sudo qemu-nbd --connect=/dev/nbd0 /<Path To qcow2/VDI>
+    #Now you could directly edit the partitions using Disk Manager, FDisk, Explorer
+    sudo qemu-nbd --disconnect /dev/nbd0
+    sudo rmmod nbd
+
+[Reference](https://gist.github.com/shamil/62935d9b456a6f9877b5)
