@@ -16,3 +16,4 @@ The script finds all small files (possibly symlink PNG files), and replaces them
 
 ## Update ICON Theme and OpenBox theme To Refelect WIN10 Theme
 
+[Download Processed files from here](https://drive.google.com/drive/folders/1uPpU1qxfl8yVM0MsLul0dbGA4E4JlgzV?usp=sharing)
