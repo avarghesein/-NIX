@@ -1,19 +1,16 @@
 # *NIX-Tweaks
 
-Performance Optimization for Virtual Machines
+Linux tweaks/optimizations
 
-## Performance Optimization - Qemu-KVM Guests
+## Lubuntu 20.04/Virtualization/Qemu-KVM
 
-Performance tweaks options for KVM Guests including CPU tuning, Nework/Disk Optimizations
+1. Performance tweaks options for KVM Guests including CPU tuning, Nework/Disk Optimizations
+2. Efficiently managing Disk Life cycle and Space through External/Internal snapshots
 
-## QemuSnapShotManagement
-
-Efficiently managing Disk Life cycle and Space through External/Internal snapshots
-
-## WIN10-Theme/
+## Lubuntu 20.04/WIN10-Theme
 
 Windows10 Theme for Lubuntu 20.04 
 
-## UBUNTU-CUSTOM-ISO/
+## Lubuntu 20.04/LiveCD/Customization
 
 Create custom LIVE UBUNTU DVD with additonal packages
