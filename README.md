@@ -1,6 +1,6 @@
-# *NIX-Tweaks
+# *NIX
 
-Linux tweaks/optimizations
+Linux/Unix tweaks/optimizations
 
 ## Lubuntu 20.04/Virtualization/Qemu-KVM
 
