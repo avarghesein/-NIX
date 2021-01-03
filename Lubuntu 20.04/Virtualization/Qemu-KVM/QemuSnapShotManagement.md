@@ -53,7 +53,7 @@ If we've moved the backing file, update the snapshot to point to the new parent 
 
 # Sample commands
 
-    qemu-img create -c -f qcow2 ./0_DATA_WIN10_PRO_X64_2020H2.img 100G
+    qemu-img create -f qcow2 ./0_DATA_WIN10_PRO_X64_2020H2.img 100G
     qemu-img convert -c -O qcow2 WIN10-VPC.qcow2 WIN10-VPC-CMPT.qcow2
     qemu-img info --backing-chain ./WIN10_PRO_X64_2020H2_CUSTOM 
     qemu-img snapshot -l WIN7-VPC-DATA-2.qcow2 
