@@ -1,6 +1,7 @@
 ## Simulate Raspberry Pi2 environment with Qemu.
 
-Working Command:
+Working Command: It uses an existing Bridge on the host and will benefit dynamic DHCP and DNS available in the network.
+Network connectvity & Internet access will be avaiable inside the RPi2 simulated machine.
 
         sudo qemu-system-arm \
         -M versatilepb \
