@@ -70,3 +70,50 @@ Add a new file vhost-net.conf to /etc/modprobe.d with the following content:
 # Drive:
 
 ## 1. Use Virtio with (Cache Mode: Unsafe, IO Mode: Threads)
+
+# File System Passthrough: (From HOST to GUEST)
+
+NOTE: Though it should provide near native performance while accessing the file system, current implementation seems slower
+compared to SAMBA shares, which is the preffered one for our environment.
+
+## 1. Add Qemu Guest Agent to the VM
+
+
+    <channel type="unix">
+      <source mode="bind" path="/var/lib/libvirt/qemu/channel/target/domain-1-LINUX-VPC/org.qemu.guest_agent.0"/>
+      <target type="virtio" name="org.qemu.guest_agent.0" state="connected"/>
+      <alias name="channel0"/>
+      <address type="virtio-serial" controller="0" bus="0" port="2"/>
+    </channel>
+
+## 2. Add the HOST file system and the MAGIC STRING, which will be used by the GUEST
+
+    <filesystem type="mount" accessmode="passthrough">
+      <driver type="path" wrpolicy="immediate"/>
+      <source dir="/media/Virtualz/SYSTEM"/>
+      <target dir="SYSTEM"/>
+      <alias name="fs2"/>
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x0c" function="0x0"/>
+    </filesystem>
+
+## 3. Add and enable necessasry drivers in GUEST
+
+Add these modules to /etc/modules in host. Load the module throgh modprobe, for the first time
+
+    loop
+    virtio
+    9p
+    9pnet
+    9pnet_virtio
+
+## 4. MOUNT the HOST filesystems in GUEST
+
+Mount directly from commandline:
+
+    sudo mount SYSTEM /media/SYSTEM -t 9p -o trans=virtio
+    
+Add to /etc/fstab, for automout
+
+    SYSTEM    /media/SYSTEM    9p    trans=virtio    0    0
+
+[Reference](https://askubuntu.com/questions/1014674/using-file-system-passthrough-with-kvm-guests)
