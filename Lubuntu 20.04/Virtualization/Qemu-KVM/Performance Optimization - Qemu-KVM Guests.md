@@ -112,7 +112,7 @@ Mount directly from commandline:
 
     sudo mount SYSTEM /media/SYSTEM -t 9p -o trans=virtio
     
-Add to /etc/fstab, for automout
+Add to /etc/fstab, for auto mount
 
     SYSTEM    /media/SYSTEM    9p    trans=virtio    0    0
 
