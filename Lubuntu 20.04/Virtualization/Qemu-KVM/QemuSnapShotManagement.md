@@ -1,8 +1,7 @@
 # Creating an External Snapshot
 
 ## Through Virsh
-Below samples create three snapshots and 3 seperate external image files.
-The last one is used for the running VM to make the changes.
+Below samples create external snapshots through virsh commandline.
 
     virsh snapshot-create-as WIN10-VPC-TEMPLATE --name 1_WIN10_PRO_X64_2020H2_CUSTOM --disk-only --atomic
     virsh snapshot-create-as WIN10-VPC-TEMPLATE --name 2_WIN10_PRO_X64_2020H2_BASESOFT --disk-only --atomic
@@ -11,6 +10,8 @@ The last one is used for the running VM to make the changes.
 Or we could directly use 'Qemu-image' commands
 
     qemu-img create -f qcow2 -b ./2_WIN10_PRO_X64_2020H2_BASESOFT ./3_WIN10_PRO_X64_2020H2_WIN10-VPC
+
+The latter one (3_WIN10_PRO...) is used for the running VM as the Editable Top Layer.
 
 Update your VM libvirt XML to reflect the same
 
