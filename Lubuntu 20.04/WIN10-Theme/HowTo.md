@@ -10,7 +10,7 @@ Update ~/.icons from [Win10 Icons](https://github.com/B00merang-Artwork/Windows-
 
 There are ICONS (PNG Files), which are just SYMLINKS (Plain text files) pointing to the Original PNG Images. 
 The original image has been mentioned as the content of the SYMLINKS file.
-Use attached script replacing such files with the Original PNG Image.
+Use the attached script for replacing such files with the Original PNG Image.
 
 The script finds all small files (possibly symlink PNG files), and replaces them with the original file.
 
