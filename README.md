@@ -6,7 +6,7 @@ Linux|Unix tweaks|optimizations
 
 1. Performance tweaks options for KVM Guests including CPU tuning, Nework/Disk Optimizations
 2. Efficiently managing Disk Life cycle and Space through External/Internal snapshots
-3. Simular RaspberryPi On Qemu Emulator
+3. Simulate RaspberryPi On Qemu Emulator
 
 ## Lubuntu 20.04|Virtualization|Docker
 
