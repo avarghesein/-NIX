@@ -10,12 +10,12 @@ Linux|Unix tweaks|optimizations
 
 ## Lubuntu 20.04|Virtualization|Docker
 
-1. Running Full Desktop On Docker Container
+Running Full Desktop On Docker Container
 
 ## Lubuntu 20.04|WIN10-Theme
 
-1. Windows10 Theme for Lubuntu 20.04 
+Windows10 Theme for Lubuntu 20.04 
 
 ## Lubuntu 20.04|LiveCD|Customization
 
-1. Create custom LIVE UBUNTU DVD with additonal packages
+Create custom LIVE UBUNTU DVD with additonal packages
