@@ -26,7 +26,7 @@ Add the below to ~/.bashrc
 NB: Use 32 bit as color depth, if you're using mstsc, otherwise client will crash !
 
 
-For running with NTA Authentication 
+For running with NLA Authentication 
   
 First create Hash for your credentials
 
