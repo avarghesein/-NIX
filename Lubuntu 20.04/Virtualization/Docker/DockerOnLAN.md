@@ -25,7 +25,7 @@ Below example shows creating a PiHole container, directly exposed over LAN with 
     --restart always \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /media/Virtualy/UBUNTU-SSD-HOME/docker/user/store/pihole/pihole:/etc/pihole \
-    --volume /media/Virtualy/UBUNTU-SSD-HOME/docker/user/store/pihole/dnsmasq.d/dnsmasq.d:/etc/dnsmasq.d \
+    --volume /media/Virtualy/UBUNTU-SSD-HOME/docker/user/store/pihole/dnsmasq.d:/etc/dnsmasq.d \
     --cap-add NET_ADMIN \
     --dns=127.0.0.1 \
     --dns=192.168.1.1 \
@@ -36,7 +36,7 @@ Below example shows creating a PiHole container, directly exposed over LAN with 
     --network docker_on_lan \
     --ip "192.168.1.41" \
     --mac-address "02:42:c0:a8:01:d8" \
-    pihole/pihole:v5.0e:v5.0
+    pihole/pihole:v5.0
 
 
 [Reference MacVlan](https://collabnix.com/2-minutes-to-docker-macvlan-networking-a-beginners-guide/)
