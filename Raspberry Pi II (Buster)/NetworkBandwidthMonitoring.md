@@ -29,7 +29,7 @@ Run the program using
 
     sudo apt install vnstat
   
-  [Use this](https://github.com/vergoh/vnstat/issues/131) guideline, if vnstat failes to create database to create historic data.
+  [Use this](https://github.com/vergoh/vnstat/issues/131) guideline, if vnstat fails to create database to store historic flow data.
 
 
 # Detailed Netowrk Monitoring (Tracking IP Flows, Using 'ntopng')
