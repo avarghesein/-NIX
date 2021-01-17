@@ -2,7 +2,7 @@
 
 1. Expand the SD Card to the entire free space (use [raspi-config](http://cagewebdev.com/raspberry-pi-expanding-the-root-partition-of-the-sd-card/) )
 
-2. Its better to use a second USB drive, for occupying major applicaions. Use 'BIND' mounts
+2. Its better to use a second USB drive with enough capacity, for occupying major applicaions/Historic Flow Data. Use 'BIND' mounts
 
 Sample entries from /etc/fstab
 
@@ -43,7 +43,7 @@ The most simpler setup would be, make Pi, as the Default Gateway
 
     sudo /sbin/iptables -P FORWARD ACCEPT
 
-If you've docker intalled, docker will populate the IP tables by it's own by rewriting any customer rules placed. Putting the below in /etc/rc.local will
+If you've docker intalled, docker will populate the IP tables by it's own by rewriting any custom rules placed. Putting the below in /etc/rc.local will
 [circumvent these issues](https://serverfault.com/questions/726918/how-can-add-iptables-rules-after-docker-sets-its-own-rules-on-startup):
 
     while ! iptables -n --list DOCKER >/dev/null 2>&1
