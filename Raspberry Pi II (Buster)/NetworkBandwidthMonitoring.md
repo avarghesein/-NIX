@@ -32,7 +32,7 @@ Run the program using
   [Use this](https://github.com/vergoh/vnstat/issues/131) guideline, if vnstat fails to create database to store historic flow data.
 
 
-# Detailed Netowrk Monitoring (Tracking IP Flows, Using 'ntopng')
+# Detailed Network Monitoring (Tracking IP Flows, Using 'ntopng')
 
 ## Prerequisite: 
 
