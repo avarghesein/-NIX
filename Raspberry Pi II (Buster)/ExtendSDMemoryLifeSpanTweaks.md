@@ -28,3 +28,20 @@ Sample entries from /etc/fstab
     /media/SDD/var/lib/ntopng /var/lib/ntopng   none    bind    0    0
     /media/SDD/var/lib/vnstat /var/lib/vnstat   none    bind    0    0
     /media/SDD/var/lib/mysql /var/lib/mysql   none    bind    0    0
+
+## Disable Journaling on the Filesystem
+
+        # Enable writeback mode. Provides the best ext4 performance.
+        tune2fs -o journal_data_writeback /dev/sdd1
+        
+        # Delete journal option
+        tune2fs -O ^has_journal /dev/sdd1
+        
+        #Checkfiles system
+        e2fsck -f /dev/sdd1
+
+Will Decrease Read/Writes to the file system
+
+[Reference](https://my-techno-arena.blogspot.com/2014/11/high-performing-linux-file-system-with.html?m=0)
+
+[Reference](https://raspberrypi.stackexchange.com/questions/169/how-can-i-extend-the-life-of-my-sd-card)
