@@ -2,9 +2,10 @@
 
 Linux|Unix tweaks|optimizations
 
-## Raspberry Pi II (Buster)|NetworkBandwidthMonitoring
+## Raspberry Pi II (Buster)
 
-Entire Network Bandwidth Monitoring and Analysis using Pi.
+1. Network Bandwidth Monitoring and Analysis using Pi.
+2. Tweaks for Extending SDCard Memory Life Span
 
 ## Lubuntu 20.04|Virtualization|Qemu-KVM
 
