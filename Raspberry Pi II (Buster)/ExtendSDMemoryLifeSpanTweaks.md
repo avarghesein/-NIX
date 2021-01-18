@@ -1,6 +1,6 @@
 ## Disable All Logging
 
-Since logging has been done constantly by the system, it could reduce the Life span through constant write operations.
+Since logging has been done constantly by the system, it could reduce the Life span of underlying storage (SD Card/USB Drive) through constant write operations.
 Disabling the same, could greatly improve the Life Span of SD Card and improve system performance
 
     sudo service rsyslog stop
