@@ -29,6 +29,13 @@ Sample entries from /etc/fstab
     /media/SDD/var/lib/vnstat /var/lib/vnstat   none    bind    0    0
     /media/SDD/var/lib/mysql /var/lib/mysql   none    bind    0    0
 
+After moving the directories, you may need to change the ownership of the new mountes, so that it will work properly
+e.g.
+
+    sudo chown -R pi:root /media/SDD/var/log
+    sudo chmod -R a+rw /media/SDD/var/log
+
+
 ## Disable Journaling on the Filesystem
 
         # Enable writeback mode. Provides the best ext4 performance.
