@@ -52,3 +52,27 @@ Will Decrease Read/Writes to the file system
 [Reference](https://my-techno-arena.blogspot.com/2014/11/high-performing-linux-file-system-with.html?m=0)
 
 [Reference](https://raspberrypi.stackexchange.com/questions/169/how-can-i-extend-the-life-of-my-sd-card)
+
+## Enable File System Check After Every Boot.
+
+This will take care of any file system corruption and repair of the same, if Pi has rebooted without a notice.
+
+Force file system check and repair, through [Kernel command line](https://raspberrypi.stackexchange.com/questions/61723/raspberry-pi-3-and-raspbian-jessie-how-to-run-fsck-at-boot).
+
+        fsck.mode=force fsck.repair=yes 
+  
+e.g.
+
+        console=serial0,115200 console=tty1 root=PARTUUID=6c586e13-02 rootfstype=ext4 elevator=deadline fsck.mode=force fsck.repair=yes rootwait
+
+[Enable File System check on drives](https://www.linuxuprising.com/2019/05/how-to-force-fsck-filesystem.html) in /etc/fstab/ with a number greater than 0. Eg.
+
+        PARTUUID=6c586e13-01  /boot           vfat    defaults          0       1
+        PARTUUID=6c586e13-02  /               ext4    defaults,noatime,nodiratime 0 2
+        #/dev/SDD
+        UUID=fba8440e-278f-4624-9080-9d090080e9ce  /media/SDD  ext4  defaults,data=writeback,noatime,nodiratime 0 3
+
+
+Finally enable auto file system check through command line:
+
+        sudo tune2fs -c 1 /dev/SDD
