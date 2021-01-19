@@ -70,10 +70,10 @@ The number specifies the order in which the drives have to be checked. e.g.
 
         PARTUUID=6c586e13-01  /boot           vfat    defaults          0       1
         PARTUUID=6c586e13-02  /               ext4    defaults,noatime,nodiratime 0 2
-        #/dev/SDD
+        #/dev/sda1
         UUID=fba8440e-278f-4624-9080-9d090080e9ce  /media/SDD  ext4  defaults,data=writeback,noatime,nodiratime 0 3
 
 
 Finally enable auto file system check through command line:
 
-        sudo tune2fs -c 1 /dev/SDD
+        sudo tune2fs -c 1 /dev/sda1
