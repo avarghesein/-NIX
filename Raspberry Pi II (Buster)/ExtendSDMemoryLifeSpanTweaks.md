@@ -65,7 +65,8 @@ e.g.
 
         console=serial0,115200 console=tty1 root=PARTUUID=6c586e13-02 rootfstype=ext4 elevator=deadline fsck.mode=force fsck.repair=yes rootwait
 
-[Enable File System check on drives](https://www.linuxuprising.com/2019/05/how-to-force-fsck-filesystem.html) in /etc/fstab/ with a number greater than 0. Eg.
+[Enable File System check on drives](https://www.linuxuprising.com/2019/05/how-to-force-fsck-filesystem.html) in /etc/fstab/ with a number greater than 0. 
+The number specifies the order in which the drives have to be checked. e.g.
 
         PARTUUID=6c586e13-01  /boot           vfat    defaults          0       1
         PARTUUID=6c586e13-02  /               ext4    defaults,noatime,nodiratime 0 2
