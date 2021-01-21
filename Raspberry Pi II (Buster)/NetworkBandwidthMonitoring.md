@@ -6,17 +6,22 @@
 
 Sample entries from /etc/fstab
 
-    #/dev/sda7
-    UUID=fba8ff0e-278f-4624-9080-9d090080e9ff  /media/SDD  ext4  defaults,data=writeback,noatime,nodiratime 0 0
-    
+    UUID=fba8440e-278f-4624-9080-9d090080e9ce  /media/SDD  ext4  defaults,data=writeback,noatime,nodiratime 0 3
+
     /media/SDD/TMP /tmp    none    bind    0    0
     /media/SDD/var/cache /var/cache   none    bind    0    0
     /media/SDD/home /home    none    bind    0    0
     /media/SDD/var/log /var/log    none    bind    0    0
     /media/SDD/var/lib/docker /var/lib/docker    none    bind    0    0
+
+    /media/SDD/var/lib/darkstat /var/lib/darkstat   none    bind    0    0
     /media/SDD/var/lib/ntopng /var/lib/ntopng   none    bind    0    0
     /media/SDD/var/lib/vnstat /var/lib/vnstat   none    bind    0    0
     /media/SDD/var/lib/mysql /var/lib/mysql   none    bind    0    0
+
+    # a swapfile is not a swap partition, no line here
+    #   use  dphys-swapfile swap[on|off]  for that
+
 
 
 3. Use 'ncdu' to monitor disk space
