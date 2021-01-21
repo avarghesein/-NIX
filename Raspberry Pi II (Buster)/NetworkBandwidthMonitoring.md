@@ -25,7 +25,7 @@ Run the program using
 
     sudo ncdu /
 
-# Simple Network Monitoring (Using ['vnstat'](https://www.cyberciti.biz/faq/ubuntu-install-vnstat-console-network-traffic-monitor/) )
+# Simple Network Monitoring (Using ['vnstat'](https://www.cyberciti.biz/faq/ubuntu-install-vnstat-console-network-traffic-monitor/) Or DarkStat)
 
     sudo apt install vnstat
   
