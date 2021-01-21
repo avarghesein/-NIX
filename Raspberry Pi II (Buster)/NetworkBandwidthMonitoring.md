@@ -31,6 +31,7 @@ Run the program using
   
   [Use this](https://github.com/vergoh/vnstat/issues/131) guideline, if vnstat fails to create database to store historic flow data.
 
+If we need a bareminimum Network Bandwidth Monitor (WebUI with IP based tracking and Persistance of History), Use [DarkStat](https://github.com/avarghesein/-NIX/blob/main/Raspberry%20Pi%20II%20(Buster)/MinimalNetworkBandwidthMonitor.md)
 
 # Detailed Network Monitoring (Tracking IP Flows, Using 'ntopng')
 
