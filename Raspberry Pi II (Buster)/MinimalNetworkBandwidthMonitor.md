@@ -37,3 +37,5 @@ Now update IP Table Rules, to route every traffic throug Pi (Pi as the gateway)
 Note: Source Address NAT is necessary, so that response packets from Router (which are coming from Internet), will always go through Pi's Network interface, before reaching original source device, which initiated the internet traffic.
 
 If we omit, Source NAT, incoming packets will be directly delivered to the Original Device by the Router, bypassing Pi's Network Interface. Which makes the Bandwidth calculation out of sync.
+
+Since the NAT rule is being applied on the same Subnet and Same interface, packets will be counted twice, which could be eliminated by setting the SRC/DST Filter for **DarkStat**.
