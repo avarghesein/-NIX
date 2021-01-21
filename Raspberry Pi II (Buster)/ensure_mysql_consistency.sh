@@ -20,6 +20,8 @@ echo "Stopping Services..."
 
 service ntopng stop
 service mariadb stop
+service mysql stop
+service redis-server stop
 #cd /var/lib/mysql/ntopng
 
 echo "Starting DB Repair..."
@@ -27,6 +29,8 @@ myisamchk -r /var/lib/mysql/ntopng/flows* &> /dev/null
 
 echo "Starting Services"
 service mariadb start
+service mysql start
+service redis-server start
 service ntopng start
 
 mysql_crashed=$(service mariadb status | grep "marked as crashed")
