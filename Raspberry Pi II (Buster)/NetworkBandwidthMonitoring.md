@@ -45,9 +45,15 @@ Run the program using
 Make all your [network traffic go through Pi's Network Interface](https://raspberrypi.stackexchange.com/questions/7487/pi-as-a-vpn-router-for-local-machines). 
 
 The most simpler setup would be, make Pi, as the Default Gateway
-(By updating settings on the router), and Make Pi forward all internet traffic back to Router through IP Forward Rules, using:
+(By updating settings on the router), and Make Pi forward all internet traffic back to Router through IP Forward Rules and Source NAT, using:
 
     sudo /sbin/iptables -P FORWARD ACCEPT
+    sudo /sbin/iptables --table nat -A POSTROUTING -s "192.168.1.0/24" -o eth0 -j MASQUERADE
+
+
+**Note:** Source Address NAT is necessary, so that response packets from Router (which are coming from Internet), will always go through Pi's Network interface, before reaching original source device, which initiated the internet traffic.
+
+If we omit, Source NAT, response packets will be directly delivered to the Original Device by the Router, bypassing Pi's Network Interface. Which makes the Bandwidth calculation out of sync. 
 
 If you've docker intalled, docker will populate the IP tables by it's own by rewriting any custom rules placed. Putting the below in /etc/rc.local will
 [circumvent these issues](https://serverfault.com/questions/726918/how-can-add-iptables-rules-after-docker-sets-its-own-rules-on-startup):
@@ -57,7 +63,9 @@ If you've docker intalled, docker will populate the IP tables by it's own by rew
         sleep 5;
     done
     sleep 10;
+    
     sudo /sbin/iptables -P FORWARD ACCEPT
+    sudo /sbin/iptables --table nat -A POSTROUTING -s "192.168.1.0/24" -o eth0 -j MASQUERADE
  
  Setup the Default Gateway for Pi, as the Router IP and Then [enable IP forwarding](https://linuxconfig.org/how-to-turn-on-off-ip-forwarding-in-linux) 
 
