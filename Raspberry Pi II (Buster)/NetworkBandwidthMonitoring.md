@@ -69,6 +69,7 @@ If you've docker intalled, docker will populate the IP tables by it's own by rew
  
  Setup the Default Gateway for Pi, as the Router IP and Then [enable IP forwarding](https://linuxconfig.org/how-to-turn-on-off-ip-forwarding-in-linux) 
 
+**Note:** Since Pi has been using the same LAN Subnet (and ethernet interface eth0) for NAT, double bandwidth usage will be reported until, proper NET filter is applied. A possible fix has been mentioned [here](https://github.com/avarghesein/-NIX/blob/main/Raspberry%20Pi%20II%20(Buster)/MinimalNetworkBandwidthMonitor.md).
 
  ## Setup Packages
  
