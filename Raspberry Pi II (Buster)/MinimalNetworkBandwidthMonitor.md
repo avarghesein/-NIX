@@ -42,7 +42,7 @@ Since the NAT rule is being applied on the same Subnet and Same interface, packe
 
 ## Periodic Flushing of Usage Data to Disk (To circumvent System Crashes)
 
-Add the below to /etc/rc.local, to flush the bandwidth usage data to disk (in every 10mins). This to handle avoid usasge dataloss during system crashes.
+Add the below to /etc/rc.local, to flush the bandwidth usage data to disk (in every 10mins). This to avoid 'bandwidth usage' dataloss during any system crashes.
 By default DarkStat, only flush data when the system/service is gracefully shutoff/restarted.
 
     #!/bin/sh -e
