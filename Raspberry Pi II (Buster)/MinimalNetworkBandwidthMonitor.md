@@ -39,3 +39,27 @@ Note: Source Address NAT is necessary, so that response packets from Router (whi
 If we omit, Source NAT, incoming packets will be directly delivered to the Original Device by the Router, bypassing Pi's Network Interface. Which makes the Bandwidth calculation out of sync.
 
 Since the NAT rule is being applied on the same Subnet and Same interface, packets will be counted twice, which could be eliminated by setting the SRC/DST Filter for **DarkStat**.
+
+## Periodic Flushing of Usage Data to Disk (To circumvent System Crashes)
+
+Add the below to /etc/rc.local, to flush the bandwidth usage data to disk (in every 10mins). This to handle avoid usasge dataloss during system crashes.
+By default DarkStat, only flush data when the system/service is gracefully shutoff/restarted.
+
+    #!/bin/sh -e
+    #
+    #Add to /etc/rc.local. e.g. sudo bash /home/pi/flush_darkstat.sh >/dev/null &
+
+    set +e   # Don't exit on error status
+
+    while true
+    do
+
+            sudo systemctl stop darkstat
+            sleep 1
+            sudo systemctl start darkstat
+
+            echo "Restarted darkstat"
+
+            sleep 10m
+
+    done
