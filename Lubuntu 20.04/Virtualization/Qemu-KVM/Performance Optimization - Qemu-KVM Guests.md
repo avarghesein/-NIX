@@ -118,7 +118,7 @@ Add to /etc/fstab, for auto mount
 
 [Reference](https://askubuntu.com/questions/1014674/using-file-system-passthrough-with-kvm-guests)
 
-## 5 Sample Configuration:
+## 5. Sample Configuration:
 
       <vcpu placement="static">2</vcpu>
       <cputune>
