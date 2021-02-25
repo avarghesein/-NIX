@@ -117,3 +117,31 @@ Add to /etc/fstab, for auto mount
     SYSTEM    /media/SYSTEM    9p    trans=virtio    0    0
 
 [Reference](https://askubuntu.com/questions/1014674/using-file-system-passthrough-with-kvm-guests)
+
+## 5 Sample Configuration:
+
+      <vcpu placement="static">2</vcpu>
+      <cputune>
+        <vcpupin vcpu="0" cpuset="0"/>
+        <vcpupin vcpu="1" cpuset="1"/>
+      </cputune>
+      <os>
+        <type arch="x86_64" machine="pc-i440fx-4.2">hvm</type>
+      </os>
+      <features>
+        <acpi/>
+        <apic/>
+        <hyperv>
+          <relaxed state="on"/>
+          <vapic state="on"/>
+          <spinlocks state="on" retries="8191"/>
+        </hyperv>
+      </features>
+      <cpu mode="host-passthrough" check="full">
+        <topology sockets="1" cores="2" threads="1"/>
+        <feature policy="require" name="vmx"/>
+      </cpu>
+      <clock offset="localtime">
+        <timer name="hpet" present="yes"/>
+        <timer name="hypervclock" present="yes"/>
+      </clock>
