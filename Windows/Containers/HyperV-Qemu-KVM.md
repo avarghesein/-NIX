@@ -1,7 +1,12 @@
 ## Enable HyperV and Containers with Windows10 Guest
 
-The key parameters would be synic, stimer, cpu-feature-hypervisor, **cpu-feature-vmx**, clock-hpet (performance), clock-hypervclock
+The key parameters would be synic, stimer, cpu-feature-hypervisor, **cpu-feature-vmx**, clock-hpet (performance), clock-hypervclock.
+Below sample allocating two cores to Guest Windows10
 
+    <cputune>
+      <vcpupin vcpu="0" cpuset="0"/>
+      <vcpupin vcpu="1" cpuset="1"/>
+    </cputune>
     <os>
       <type arch="x86_64" machine="pc-i440fx-4.2">hvm</type>
       <boot dev="hd"/>
