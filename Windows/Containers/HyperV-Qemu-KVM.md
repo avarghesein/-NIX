@@ -40,4 +40,5 @@ Below sample allocating two cores to Guest Windows10
  [Win10 guests high KVM host CPU usage](https://unix.stackexchange.com/questions/534155/win10-guests-high-kvm-host-cpu-usage)
  
  [High KVM/QEMU CPU utilization when Windows 10 guest is idle](https://www.reddit.com/r/VFIO/comments/80p1q7/high_kvmqemu_cpu_utilization_when_windows_10/)
+ 
  [Kvm nested Virtualbox windows guest](https://superuser.com/questions/1431148/kvm-nested-virtualbox-windows-guest)
