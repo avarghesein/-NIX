@@ -16,3 +16,5 @@ Windows Network Device ID's are of Format:
 [Search for "Ethernet" in HKLM:SYSTEM\CurrentControlSet\Control\Network\{4d36e972-e325-11ce-bfc1-08002be10318}](https://stackoverflow.com/questions/29913516/how-to-get-meaningful-network-interface-names-instead-of-guids-with-netifaces-un)
 
     "\\Device\\NPF_{1FE9112F-3223-4936-B74C-44A48D13B0BD}"
+
+[L2 Bridges](https://techcommunity.microsoft.com/t5/networking-blog/l2bridge-container-networking/ba-p/1180923)
