@@ -36,7 +36,7 @@ Below sample uses Qemu emulator (inside a KVM VM, used for testing purpose) for 
     -M versatilepb \
     -cpu arm1176 \
     -m 256 \
-    -net nic,macaddr=00:16:3e:00:00:01 -net bridge,name=br0\
+    -net nic,macaddr=00:16:3e:00:00:01 -net bridge,name=br0 \
     -drive "file=/dev/sda,if=none,index=0,media=disk,format=raw,id=disk0" \
     -device "virtio-blk-pci,drive=disk0,disable-modern=on,disable-legacy=off" \
     -drive "file=/dev/vdd,if=none,index=1,media=disk,format=raw,id=disk1" \
