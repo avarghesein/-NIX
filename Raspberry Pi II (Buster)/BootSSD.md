@@ -2,7 +2,7 @@
 
 #### Update Partition UUID and Part UUID of Partitions in the SSD to Unique values
 
-    [use fdisk](https://askubuntu.com/questions/1250224/how-to-change-partuuid)
+[use fdisk](https://askubuntu.com/questions/1250224/how-to-change-partuuid)
 
 #### Update cmdline.txt in the boot partition of SD Card, to point to the rootfs partition in the SSD
   
