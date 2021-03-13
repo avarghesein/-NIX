@@ -1,3 +1,7 @@
+## The Simpler Way (Use Solid State Drive)
+
+[Ref](https://github.com/avarghesein/-NIX/blob/main/Raspberry%20Pi%20II%20(Buster)/BootSSD.md)
+
 ## Disable All Logging
 
 Since logging has been done constantly by the system, it could reduce the Life span of underlying storage (SD Card/USB Drive) through constant write operations.
