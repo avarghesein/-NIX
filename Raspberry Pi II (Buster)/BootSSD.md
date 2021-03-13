@@ -8,4 +8,4 @@
   
     By putting the Part UUID of RootFS Partition of SSD
 
-#### Connect both SD Card and SSD to RaspberryPi2 and boot the system
+#### Connect both SD Card and SSD (through Powered USB Hub) to RaspberryPi2 and boot the system
