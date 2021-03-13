@@ -1,6 +1,6 @@
 ## The Simpler Way (Use Solid State Drive)
 
-[Ref](https://github.com/avarghesein/-NIX/blob/main/Raspberry%20Pi%20II%20(Buster)/BootSSD.md)
+[Raspberry Pi2: How To Boot From SSD](https://github.com/avarghesein/-NIX/blob/main/Raspberry%20Pi%20II%20(Buster)/BootSSD.md)
 
 ## Disable All Logging
 
