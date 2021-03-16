@@ -22,6 +22,7 @@ Below example shows creating a PiHole container, directly exposed over LAN with 
 
     docker run --detach \
     --name PiHole-ON-LAN \
+    --hostname "PiHole-ON-LAN" \
     --restart always \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /media/Virtualy/UBUNTU-SSD-HOME/docker/user/store/pihole/pihole:/etc/pihole \
