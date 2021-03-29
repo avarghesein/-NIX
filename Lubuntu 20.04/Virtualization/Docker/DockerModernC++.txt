@@ -17,6 +17,7 @@ RUN apt install build-essential -y
 #-it avarghesein/pi_builder_image:v7_armhf /bin/bash
 
 #Now Within container run the below commands to build the C++ program for RaspberryPI
+#mkdir /mnt/cpp_source/build_arm
 #cd /mnt/cpp_source/build_arm
 #cmake ..
 #make
