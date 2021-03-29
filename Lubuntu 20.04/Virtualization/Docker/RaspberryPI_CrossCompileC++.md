@@ -23,7 +23,7 @@
     --mount type=bind,source="/home/cpp_source/",target="/mnt/cpp_source/"  \
     -it avarghesein/pi_builder_image:v7_armhf /bin/bash
 
-Where "/home/cpp_source/", is the folder in the Host machine, containing C++ source files to be build for RaspberryPi
+Where "/home/cpp_source/", is the folder in the Host machine, containing C++ source files to be built for RaspberryPi
 
 ## Build the Source for RaspberryPI
 
