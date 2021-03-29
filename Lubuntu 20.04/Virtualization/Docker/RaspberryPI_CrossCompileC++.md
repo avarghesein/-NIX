@@ -27,6 +27,7 @@ Where "/home/cpp_source/", is the folder in the Host machine, containing C++ sou
 
 ## Build the Source for RaspberryPI
 
+    mkdir /mnt/cpp_source/build_arm
     cd /mnt/cpp_source/build_arm
     cmake ..
     make
