@@ -1,0 +1,30 @@
+#First ensure you've enabled Docker-Qemu-User. See below link
+#https://github.com/fkrull/docker-qemu-user-static
+#> docker run --rm --privileged fkrull/qemu-user-static enable
+
+
+FROM arm32v7/python:3.9-slim-buster
+
+RUN apt update --fix-missing -y
+RUN apt install cmake -y
+RUN apt install build-essential -y
+
+#docker build -f DockerModernC++.txt -t avarghesein/pi_builder_image:v7_armhf .
+
+#docker run --name "PiBuilder" -it \
+#--privileged \
+#--mount type=bind,source="/home/cpp_source/",target="/mnt/cpp_source/"  \
+#-it avarghesein/pi_builder_image:v7_armhf /bin/bash
+
+#Now Within container run the below commands to build the C++ program for RaspberryPI
+#cd /mnt/cpp_source/build_arm
+#cmake ..
+#make
+#Now run the built program
+#exit
+
+
+#Use the below command to rerun the Build Container, with settings intact
+#docker run --rm --privileged fkrull/qemu-user-static enable
+#docker start PiBuilder
+#docker attach PiBuilder
