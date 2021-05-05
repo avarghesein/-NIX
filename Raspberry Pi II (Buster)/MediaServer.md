@@ -1,6 +1,6 @@
 ## Make Pi to [Boot from SSD](https://github.com/avarghesein/-NIX/blob/main/Raspberry%20Pi%20II%20(Buster)/BootSSD.md)
 
-Make enough storage, for keeping media files
+Have enough storage, to keep your media files
 
 ## Setup Jellyfin (Fully OpenSource)
 
