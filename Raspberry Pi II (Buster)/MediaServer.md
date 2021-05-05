@@ -2,6 +2,22 @@
 
 Make enough storage, for keeping media files
 
+## Setup Jellyfin (Fully OpenSource)
+
+Run as [Docker Container](https://jellyfin.org/docs/general/administration/installing.html).
+
+    docker run -d \
+     --name jellyfin \
+     --user 1003:1003 \
+     --net=host \
+     --mount type=bind,source=/media/SDD/jellyfin/config,target=/config \
+     --mount type=bind,source=/media/SDD/jellyfin/cache,target=/cache \
+     --mount type=bind,source=/media/SDD/MediaBox,target=/media \
+     --restart=unless-stopped \
+     jellyfin/jellyfin
+
+Access at: http://<IP>:8096/
+
 ## Setup Plex Media Server
 
 [Setup Link](https://www.ionos.com/digitalguide/server/configuration/raspberry-pi-plex/)
