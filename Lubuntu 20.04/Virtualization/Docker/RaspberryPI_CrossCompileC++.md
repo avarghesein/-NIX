@@ -1,3 +1,7 @@
+## Highlevel Architecture
+
+![alt Arch](https://github.com/avarghesein/-NIX/blob/main/Lubuntu%2020.04/Virtualization/Docker/CrossCompileC%2B%2BWithDocker.png)
+
 ## Enable Qemu-User-Mode emulation, for RaspberyPi (Arm) under X64 Machine
     
     docker run --rm --privileged fkrull/qemu-user-static enable
