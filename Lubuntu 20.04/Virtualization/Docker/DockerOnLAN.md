@@ -90,3 +90,16 @@ Below example shows creating a PiHole container, directly exposed over LAN with 
 [Reference MacVlan](https://collabnix.com/2-minutes-to-docker-macvlan-networking-a-beginners-guide/)
 
 [Reference PiHole](https://gist.github.com/xirixiz/ecad37bac9a07c2a1204ab4f9a17db3c)
+
+
+# MAC VLAN High Performance Over Linux Bridge (References)
+
+[Performance Analysis](https://cs.nju.edu.cn/tianchen/lunwen/2017/sgws-Zhao.pdf)
+
+[Reference1](https://discuss.linuxcontainers.org/t/lxd-macvlan-vs-bridge-performance/4534/2)
+
+[Reference2](https://discuss.linuxcontainers.org/t/macvlan-vs-network-bridge/465/2)
+
+[Concept Explained](https://events.static.linuxfound.org/sites/events/files/slides/LinuxConJapan2014_makita_0.pdf)
+
+[Intro to Linux Virtual Networking](https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking#macvlan)
