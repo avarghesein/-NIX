@@ -2,6 +2,10 @@
 
 Linux|Unix tweaks|optimizations
 
+## Debian 10 (Buster) - Primary OS
+
+1. FaceDetection through OpenCV 
+
 ## Raspberry Pi II (Buster)
 
 1. Network Bandwidth Monitoring and Analysis using Pi.
