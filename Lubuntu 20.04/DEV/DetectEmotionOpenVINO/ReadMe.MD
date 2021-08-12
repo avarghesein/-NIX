@@ -43,9 +43,9 @@ Below commands have been verified on Ubuntu 20.04 LTS. Run the same in the exact
 
     sudo ./install_prerequisites.sh
 
-## 4. Install Required Prebuilt CNN (Neural Networks) Optimized Models for Intel Hardware
+## 4. Install Required Pretrained CNN (Neural Networks) Optimized Models for Intel Hardware
 
-[Refer](https://docs.openvinotoolkit.org/2021.2/omz_tools_downloader_README.html) to know more on Prebuilt/Public Model Downloads (Tensorflow, Keras etc.)
+[Refer](https://docs.openvinotoolkit.org/2021.2/omz_tools_downloader_README.html) to know more on Pretrained/Public Model Downloads (Tensorflow, Keras etc.)
 
 Below commands have been verified on Ubuntu 20.04 LTS. Run the same in the exact order on terminal.
 
