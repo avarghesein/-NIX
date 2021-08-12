@@ -6,11 +6,11 @@ System Spec: Qemu-KVM, host CPU Passthrough [Intel Core i5 7400 CPU]
 
 OS: Ubuntu 20.04
 
-## 2. Download OpenVINO toolkit, for the given System Spec
+## 2. Download OpenVINO Toolkit, for the given System Spec
 
 [Linux 2021.4 LTS](https://software.intel.com/content/www/us/en/develop/tools/openvino-toolkit/download.html?operatingsystem=linux&distributions=webdownload&version=2021.4%20LTS%20(latest)&options=offline)
 
-## 3. Install OpenVINO toolkit
+## 3. Install OpenVINO Toolkit
 
 [Refer](https://docs.openvinotoolkit.org/latest/openvino_docs_install_guides_install) for detailed instructions.
 
