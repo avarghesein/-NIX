@@ -12,7 +12,7 @@ OS: Ubuntu 20.04
 
 ## 3. Install OpenVINO Toolkit
 
-[Refer](https://docs.openvinotoolkit.org/latest/openvino_docs_install_guides_install) for detailed instructions.
+[Refer](https://docs.openvinotoolkit.org/latest/openvino_docs_install_guides_installing_openvino_linux.html#install-openvino) for detailed instructions.
 
 Below commands have been verified on Ubuntu 20.04 LTS. Run the same in the exact order on terminal.
 
