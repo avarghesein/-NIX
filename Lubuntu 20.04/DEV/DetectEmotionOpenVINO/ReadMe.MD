@@ -87,4 +87,4 @@ Below commands have been verified on Ubuntu 20.04 LTS. Run the same in the exact
     -m_lm $modelPath/facial-landmarks-35-adas-0002/FP16-INT8/facial-landmarks-35-adas-0002.xml
   
  
- 
+ NOTE: The code is an edited version of [OpenVINO Demo code](https://docs.openvinotoolkit.org/2018_R5/_samples_interactive_face_detection_demo_README.html)
