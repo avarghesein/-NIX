@@ -35,6 +35,34 @@ Dedicated 2 Core for VM
   
 [Reference](https://leduccc.medium.com/improving-the-performance-of-a-windows-10-guest-on-qemu-a5b3f54d9cf5)
 
+# Display:
+
+## Use Virtio Video Device (for Linux Guests)
+
+With 3D acceleration
+
+    <video>
+      <model type="virtio" heads="1" primary="yes">
+        <acceleration accel3d="yes"/>
+      </model>
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x02" function="0x0"/>
+    </video>
+
+
+## Enable OpenGL with Spice (for Linux Guests)
+
+    <graphics type="spice">
+      <listen type="none"/>
+      <image compression="off"/>
+      <gl enable="yes"/>
+    </graphics>
+
+NB: Ensure, you enabled "Compositor", on Host OS (e.g. Compton in  LxQT, Debian 10 Buster)
+
+Once done you would see VGA Virtio Device and Virgil as the renderer in the Guest device.
+
+Check the output of  'lspci | grep vga' and
+'glxinfo | grep "direct rendering"'
 
 # Network:
 
