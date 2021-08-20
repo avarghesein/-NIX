@@ -16,6 +16,7 @@ Linux|Unix tweaks|optimizations
 1. Performance tweaks options for KVM Guests including CPU tuning, Nework/Disk Optimizations
 2. Efficiently managing Disk Life cycle and Space through External/Internal snapshots
 3. Simulate RaspberryPi On Qemu Emulator
+4. Detect Faces, Emotion, Gender through OpenVINO/C++ Sample
 
 ## Lubuntu 20.04|Virtualization|Docker
 
