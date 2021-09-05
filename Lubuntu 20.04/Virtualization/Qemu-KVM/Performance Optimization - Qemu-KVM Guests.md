@@ -99,7 +99,43 @@ Add a new file vhost-net.conf to /etc/modprobe.d with the following content:
 
 ## 1. Use Virtio with (Cache Mode: Unsafe, IO Mode: Threads)
 
-# File System Passthrough: (From HOST to GUEST)
+# File System Passthrough (As a Native Partition): (From HOST to GUEST)
+
+This requires latest Kernel, Qemu, Libvirt and VirtManager (for eg: Debian 11 Bullseye).
+Guests will see the shared folder as a Native Partition (rather than a Network Share) in Disk Management.
+
+The below configuration shows "memfd memory" backed passthrough, which is the most simple to setup.
+
+        <domain>
+          ...
+          <memoryBacking>
+            <source type='memfd'/>
+            <access mode='shared'/>
+          </memoryBacking>
+          ...
+        </domain>
+
+
+        <domain>
+          ...
+          <devices>
+            ...
+            <filesystem type='mount' accessmode='passthrough'>
+              <driver type='virtiofs'/>
+              <source dir='/path'/>
+              <target dir='mount_tag'/>
+            </filesystem>
+            ...
+          </devices>
+        </domain>
+        
+Complete Options are mentioned [here](https://libvirt.org/kbase/virtiofs.html)
+
+[Reference](https://unix.stackexchange.com/a/635636)
+
+[Windows Guest Drivers/Setup](https://virtio-fs.gitlab.io/howto-windows.html)
+
+# File System Passthrough (As a FileShare): (From HOST to GUEST)
 
 NOTE: Though it should provide near native performance while accessing the file system, current implementation seems slower
 compared to SAMBA shares, which is the preffered one for our environment.
