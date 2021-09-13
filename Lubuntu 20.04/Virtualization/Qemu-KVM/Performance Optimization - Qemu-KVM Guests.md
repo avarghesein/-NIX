@@ -64,6 +64,12 @@ Once done you would see VGA Virtio Device and Virgil as the renderer in the Gues
 Check the output of  'lspci | grep vga' and
 'glxinfo | grep "direct rendering"'
 
+## Use Virt-Viewer client with HotKeys
+
+For achieving similar experience as of RDP Clients/VirtualBox
+
+[Sample Script](https://github.com/avarghesein/-NIX/blob/main/Debian%2010/RunWin10DevVpc.sh)
+
 # Network:
 
 ## 1. Use Virtio with Vhost-net Networking.
