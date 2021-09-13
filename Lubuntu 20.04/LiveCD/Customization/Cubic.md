@@ -10,3 +10,9 @@ For accessing internet inside chroot, use below commands on terminal
     ln -sr /run/systemd/resolve/resolv.conf /run/systemd/resolve/stub-resolv.conf;
 
 [Ref](https://askubuntu.com/questions/741753/how-to-use-cubic-to-create-a-custom-ubuntu-live-cd-image)
+
+## Use 'mkusb', for persistant Live CDs
+
+For both Debian/Ubuntu Distros.
+
+[Reference](https://help.ubuntu.com/community/mkusb/persistent)
