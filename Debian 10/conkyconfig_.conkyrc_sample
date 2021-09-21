@@ -1,0 +1,90 @@
+-- vim: ts=4 sw=4 noet ai cindent syntax=lua
+--[[
+Conky, a system monitor, based on torsmo
+
+Any original torsmo code is licensed under the BSD license
+
+All code written since the fork of torsmo is licensed under the GPL
+
+Please see COPYING for details
+
+Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+Copyright (c) 2005-2012 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+All rights reserved.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+]]
+
+conky.config = {
+    alignment = 'bottom_right',
+    background = false,
+    border_width = 1,
+    cpu_avg_samples = 2,
+	default_color = 'black',
+    default_outline_color = 'black',
+    default_shade_color = 'black',
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'DejaVu Sans Mono:size=12',
+    gap_x = 5,
+    gap_y = 50,
+    minimum_height = 5,
+	minimum_width = 50,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'normal',
+    own_window_transparent = false,
+    own_window_argb_visual = true,
+    own_window_argb_value=0,
+    own_window_colour="white",
+    own_window_hints="above",
+    stippled_borders = 1,
+    update_interval = 3.0,
+    uppercase = false,
+    use_spacer = 'none',
+    show_graph_scale = false,
+    show_graph_range = false
+}
+
+conky.text = [[
+$hr
+CPU1: ${cpu cpu1}%$alignr${exec sensors | grep Core | tr -s  " " | cut -d " " -f 3 | sed '1!d' } $alignr${cpubar cpu1 8,60}
+CPU2: ${cpu cpu2}%$alignr${exec sensors | grep Core | tr -s  " " | cut -d " " -f 3 | sed '2!d' } $alignr${cpubar cpu2 8,60}
+CPU3: ${cpu cpu3}%$alignr${exec sensors | grep Core | tr -s  " " | cut -d " " -f 3 | sed '3!d' } $alignr${cpubar cpu3 8,60}
+CPU4: ${cpu cpu4}%$alignr${exec sensors | grep Core | tr -s  " " | cut -d " " -f 3 | sed '4!d' } $alignr${cpubar cpu4 8,60}
+ CLK: ${exec lscpu | grep "CPU MHz" | tr -s ' ' | cut -d " " -f 3 } MHz
+$hr
+ RAM: $memperc%$alignr $mem/$memmax $alignr${membar 8,60}
+$hr
+ BRD: ${exec sensors | grep temp2 | tr -s  " " | cut -d " " -f 2}$alignr | Uptime:$color $uptime
+$hr
+
+DISK: R/W/Total kB/s
+
+Maxtor 240GB: ${diskiograph_read /dev/sda 30,150 555555 AAAAAA -l} ${diskiograph_write /dev/sda 30,150 555555 AAAAAA -l}
+              ${exec iostat -d  | grep sda | awk '{ print $3"/"$4; }'}    ${diskio /dev/sda}              
+ SEAGATE 1TB: ${diskiograph_read /dev/sdc 30,150 555555 AAAAAA -l} ${diskiograph_write /dev/sdc 30,150 555555 AAAAAA -l}
+              ${exec iostat -d  | grep sdc | awk '{ print $3"/"$4; }'}    ${diskio /dev/sdc}
+      WD 1TB: ${diskiograph_read /dev/sdb 30,150 555555 AAAAAA -l} ${diskiograph_write /dev/sdb 30,150 555555 AAAAAA -l}
+              ${exec iostat -d  | grep sdb | awk '{ print $3"/"$4; }'}    ${diskio /dev/sdb}
+$hr
+NETWORK: ${downspeed eth0} ${downspeedgraph eth0 30,150 -t -l} 
+]]

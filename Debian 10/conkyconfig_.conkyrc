@@ -1,0 +1,51 @@
+conky.config = {
+    alignment = 'bottom_left',
+    background = false,
+    border_width = 1,
+    cpu_avg_samples = 2,
+	default_color = 'yellow',
+    default_outline_color = 'yellow',
+    default_shade_color = 'yellow',
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'DejaVu Sans Mono:size=12',
+    gap_x = 5,
+    gap_y = 50,
+    minimum_height = 5,
+	minimum_width = 50,
+    net_avg_samples = 2,
+    double_buffer = true,  
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    own_window = true,
+    own_window_class = conky,
+    own_window_type = desktop,
+    own_window_transparent = true,
+    own_window_argb_visual = true,
+    own_window_argb_value=0,
+    own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
+    stippled_borders = 1,
+    update_interval = 5.0,
+    uppercase = false,
+    use_spacer = 'none',
+    show_graph_scale = false,
+    show_graph_range = false
+}
+
+conky.text = [[
+$hr
+Uptime: $uptime | CPU: ${cpu cpu0}% ${cpubar cpu0 8,200} | RAM: $memperc% $mem/$memmax ${membar 8,200}
+$hr
+CPU1: ${cpu cpu1}% ${exec sensors | grep Core | tr -s  " " | cut -d " " -f 3 | sed '1!d' } ${cpubar cpu1 8,60} CPU2: ${cpu cpu2}% ${exec sensors | grep Core | tr -s  " " | cut -d " " -f 3 | sed '2!d' } ${cpubar cpu2 8,60}  BRD: ${exec sensors | grep temp2 | tr -s  " " | cut -d " " -f 2}      NETWORK: ${downspeed eth0} ${downspeedgraph eth0 20,150 -t -l}
+CPU3: ${cpu cpu3}% ${exec sensors | grep Core | tr -s  " " | cut -d " " -f 3 | sed '3!d' } ${cpubar cpu3 8,60} CPU4: ${cpu cpu4}% ${exec sensors | grep Core | tr -s  " " | cut -d " " -f 3 | sed '4!d' } ${cpubar cpu4 8,60}  ${alignr 2} CPU History: ${cpugraph cpu0 15,300 -t -l}
+$hr
+DISK: R/W/Total kB/s
+Maxtor 240GB: ${diskiograph_read /dev/sda 20,150 -l} ${diskiograph_write /dev/sda 20,150 -l} WD 1TB: ${diskiograph_read /dev/sdc 20,150 -l} ${diskiograph_write /dev/sdc 20,150 -l}
+              ${exec iostat -d  | grep sda | awk '{ print $3"/"$4; }'}    ${diskio /dev/sda}                             ${exec iostat -d  | grep sdc | awk '{ print $3"/"$4; }'} ${diskio /dev/sdc} 
+              
+      SEAGATE 1TB: ${diskiograph_read /dev/sdb 20,150 -l} ${diskiograph_write /dev/sdb 20,150 -l} ${exec iostat -d  | grep sdb | awk '{ print $3"/"$4; }'} ${diskio /dev/sdb}  
+]]
