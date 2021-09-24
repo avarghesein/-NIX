@@ -5,6 +5,8 @@ Linux|Unix tweaks|optimizations
 ## Debian 10 (Buster) - Primary OS
 
 1. FaceDetection through OpenCV 
+2. RDP Tweaks for connecting to an already existing Local Session
+3. Virt-Viewer Tweaks to use HotKeys for Seamless Experience
 
 ## Raspberry Pi II (Buster)
 
