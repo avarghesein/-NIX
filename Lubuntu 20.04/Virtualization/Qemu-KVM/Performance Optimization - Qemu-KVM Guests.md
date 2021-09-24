@@ -68,7 +68,7 @@ Check the output of  'lspci | grep vga' and
 
 For achieving similar experience as of RDP Clients/VirtualBox
 
-[Sample Script](https://github.com/avarghesein/-NIX/blob/main/Debian%2010/RunWin10DevVpc.sh)
+[Sample Script](https://github.com/avarghesein/-NIX/blob/main/Debian%2010/Virtualization/QEMU-KVM/Boot%20DEB10-DEV-VPC.desktop)
 
 # Network:
 
