@@ -16,14 +16,6 @@ Edit /etc/xrdp/xrdp.ini, and add the below lines.
     username=ask
     password=ask
 
-    [LOCAL-SESSION]
-    param=x11vnc
-    param=-noxdamage 
-    param=-display
-    parasm=:0
-    param=-safer
-    param=-once
-
 [Reference](https://github.com/neutrinolabs/xrdp/issues/960)
 
 ## Setup x11vnc to run with Login Screen (lightdm)
