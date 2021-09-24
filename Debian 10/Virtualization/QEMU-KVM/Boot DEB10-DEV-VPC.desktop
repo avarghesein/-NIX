@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Type=Application
 Name=Boot DEB10-DEV-VPC
-Name[en_IN]=Boot dEB10-DEV-VPC
+Name[en_IN]=Boot DEB10-DEV-VPC
 Exec=bash -c "export LIBVIRT_DEFAULT_URI='qemu:///system';virsh connect qemu:///system;virsh start LINUX-DEV-VPC;virt-viewer --spice-disable-effects=wallpaper,animation --spice-color-depth=16 --hotkeys=toggle-fullscreen=ctrl+win+f  -a --domain-name LINUX-DEV-VPC;"
 Type=Application
 Categories=Application;
