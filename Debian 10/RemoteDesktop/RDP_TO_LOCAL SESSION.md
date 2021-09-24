@@ -29,12 +29,13 @@ Create /etc/systemd/system/RDP-VNC.service, with below content
     [Service]
     Type=simple
     User=lightdm
-    ExecStart=/usr/bin/x11vnc -display :0 -forever -loop -noxdamage -repeat -rfbport 5900 -safer -shared -xkb                   
+    ExecStart=/usr/bin/x11vnc -display :0 -forever -loop -noxdamage -repeat -rfbport 5900 -safer -shared -xkb -solid "darkblue" -speeds lan -overlay -localhost     
     Restart=always
     RestartSec=3
 
     [Install]
     WantedBy=graphical.target
+
 
 [Reference](https://unix.stackexchange.com/questions/653221/how-can-i-set-up-x11vnc-to-start-on-boot-with-lightdm)
 
