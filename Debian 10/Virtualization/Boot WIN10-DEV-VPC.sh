@@ -14,7 +14,7 @@ virt-viewer --spice-disable-effects=wallpaper,animation --spice-color-depth=16 -
 #Type=Application
 #Name=Boot WIN10-DEV-VPC
 #Name[en_IN]=Boot WIN10-DEV-VPC
-#Exec="/home/abraham/Desktop/Scripts/RunWin10DevVpc.sh"
+#Exec="/home/abraham/Desktop/Scripts/Boot WIN10-DEV-VPC.sh"
 #Terminal=false 
 #Type=Application
 #Categories=Application;
