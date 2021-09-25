@@ -1,3 +1,5 @@
+# Option1 (Use x11vnc with XRDP)
+
 ## Install xrdp
 
 ## Install x11vnc
@@ -50,3 +52,23 @@ Now reload systemd daemon, and enable the service.
 [x11vnc How To](https://wiki.archlinux.org/title/x11vnc#Lightdm)
 
 [x11vnc commandline reference](https://linux.die.net/man/1/x11vnc)
+
+# Option2 (Use xpra with XRDP)
+
+## Install xpra
+
+[Reference](https://github.com/Xpra-org/xpra/blob/master/docs/Usage/README.md)
+
+## Start XPRA server from the Local Desktop Session
+
+        xpra shadow --no-clipboard
+   
+   [Reference](https://github.com/Xpra-org/xpra/issues/823)
+   
+## From Within Remote XRDP Session (2nd Session), Connect to XPRA Server on Display:0 (Local Desktop Session)
+
+        xpra attach :0
+   
+   NOTE: Use SHIFT+F11 for Toggling Full Screen
+  
+   [Reference](https://github.com/Xpra-org/xpra/issues/972)
