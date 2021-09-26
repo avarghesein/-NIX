@@ -7,6 +7,7 @@ Linux|Unix tweaks|optimizations
 1. FaceDetection through OpenCV 
 2. RDP Tweaks for connecting to an already existing Local Session
 3. Virt-Viewer Tweaks to use HotKeys for Seamless Experience
+4. Boot Performance Tweaks
 
 ## Raspberry Pi II (Buster)
 
