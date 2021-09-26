@@ -15,9 +15,10 @@ Edit /etc/systemd/journald.conf,
     MaxLevelKMsg=warning
     MaxLevelConsole=notice
     MaxLevelWall=crit
-    
- [Disable the service](https://forums.fedoraforum.org/showthread.php?292543-how-to-permanently-disable-systemd-journald-service)
+
+This ensures boot speed and overall increase in performance.
+
+ [Disable the service. Not Recommended](https://forums.fedoraforum.org/showthread.php?292543-how-to-permanently-disable-systemd-journald-service)
  
     systemctl mask systemd-journald.service
 
-This ensures boot speed and overall increase in performance as entire logging has been disabled in the system.
