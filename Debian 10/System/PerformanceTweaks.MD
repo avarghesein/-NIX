@@ -22,3 +22,7 @@ This ensures boot speed and overall increase in performance.
  
     systemctl mask systemd-journald.service
 
+
+## Use Right IO-Schedulers for SSD/HDD Drives
+
+[Refer Multi Queue-IO Schedulers](https://my-techno-arena.blogspot.com/2019/10/enable-high-performance-block-multi.html)
