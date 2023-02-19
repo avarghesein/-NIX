@@ -2,9 +2,9 @@
 
 To cope with the less processing power of RaspberryPi, use a Browser which offloads javascript executions to Cloud Servers.
 
-This make the Browsing experience incredibly faster.
+This makes the Browsing experience incredibly faster.
 
-Try [Puffin Browser], which is the [fastest server side browser](https://cloudmosa.medium.com/puffin-browser-is-faster-than-other-browsers-heres-why-d5c7d8f0fcb6).
+Try Puffin Browser, which is the [fastest server side browser](https://cloudmosa.medium.com/puffin-browser-is-faster-than-other-browsers-heres-why-d5c7d8f0fcb6).
 
 [Install from deb package](https://www.puffin.com/cloud-learning/download)
 
