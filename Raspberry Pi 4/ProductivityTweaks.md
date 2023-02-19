@@ -1,13 +1,3 @@
-## Use a "Server Side" Browser to make Browsing Faster
-
-To cope with the less processing power of RaspberryPi, use a Browser which offloads javascript executions to Cloud Servers.
-
-This makes the Browsing experience incredibly faster.
-
-Try Puffin Browser, which is the [fastest server side browser](https://cloudmosa.medium.com/puffin-browser-is-faster-than-other-browsers-heres-why-d5c7d8f0fcb6).
-
-[Install from deb package](https://www.puffin.com/cloud-learning/download)
-
 ## Add a "Show Desktop" Launcher To Toolbar
 1. Navigate to "Start>Preferences>Main Menu Editor"
 2. Click "New Item" Button
@@ -38,3 +28,15 @@ Follow [this link](https://github.com/avarghesein/-NIX/blob/main/Raspberry%20Pi%
 ## Enable Audio and Custom Resolutions with RDP Remote Sessions
 
 Follow [this link](https://github.com/avarghesein/-NIX/blob/main/Raspberry%20Pi%204/EnableSoundInRDP.md) for implementation instructions
+
+## Use a "Server Side" Browser to make Browsing Faster
+
+To cope with the less processing power of RaspberryPi, use a Browser which offloads javascript executions to Cloud Servers.
+
+This makes the Browsing experience incredibly faster.
+
+Try Puffin Browser, which is the [fastest server side browser](https://cloudmosa.medium.com/puffin-browser-is-faster-than-other-browsers-heres-why-d5c7d8f0fcb6).
+
+[Install from deb package](https://www.puffin.com/cloud-learning/download)
+
+Note: Since Puffin uses old versions of ChromeEngine, some sites may not load properly.
