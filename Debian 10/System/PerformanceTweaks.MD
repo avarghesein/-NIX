@@ -25,4 +25,4 @@ This ensures boot speed and overall increase in performance.
 
 ## Use Right IO-Schedulers for SSD/HDD Drives
 
-[Refer Multi Queue-IO Schedulers](https://my-techno-arena.blogspot.com/2019/10/enable-high-performance-block-multi.html)
+[Refer Multi Queue-IO Schedulers](https://avarghesein.blogspot.com/2019/10/enable-high-performance-block-multi.html)
