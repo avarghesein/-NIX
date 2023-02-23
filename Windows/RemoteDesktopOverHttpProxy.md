@@ -2,9 +2,10 @@
 
 ## 1. Requirements Windows2012 Server Or Higher
 
-### OpenSSHServer Configured in Windows2012 Server & Password | Key-Based authentication is enabled
+### OpenSSHServer Configured with "TCP Tunneling Enabled" in Windows2012 Server & Password | Key-Based authentication is enabled
 
     #File: C:\ProgramData\ssh\sshd_config
+    AllowTcpForwarding yes
     StrictModes no
     PasswordAuthentication yes
     PubkeyAuthentication yes    
