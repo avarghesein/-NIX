@@ -74,7 +74,7 @@ Note: You could also setup putty, profiles to perform the same.
     
 ### 5. Or a PowerShell Script to Automate Steps 3 & 4
 
-        Start-Process -FilePath "ssh" -ArgumentList "WindowsServer1"
+        Start-Process -WindowStyle Minimized -FilePath "ssh" -ArgumentList "WindowsServer1"
         ##Start-Process -FilePath "putty.exe" -ArgumentList  "-load","WindowsServer1","-pw","<SSH Password>"
         Start-Sleep -Seconds 2
         Start-Process -FilePath "WindowsServer1.rdp"
