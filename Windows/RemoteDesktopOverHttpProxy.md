@@ -64,7 +64,17 @@ Connect through command
     
          ssh WindowsServer1
          
-## 3. Connect Remote Desktop from Client To Server, through Local Port 3389
+Note: You could also setup putty, profiles to perform the same.
+
+## 4. Connect Remote Desktop from Client To Server, through Local Port 3389
 
         mstsc /v localhost:3389
 
+    Create a RDP file (WindowsServer1.rdp) for an easy launch
+    
+### 5. Or a PowerShell Script to Automate Steps 3 & 4
+
+        Start-Process -FilePath "ssh" -ArgumentList "WindowsServer1"
+        ##Start-Process -FilePath "putty.exe" -ArgumentList  "-load","WindowsServer1","-pw","<SSH Password>"
+        Start-Sleep -Seconds 2
+        Start-Process -FilePath "WindowsServer1.rdp"
