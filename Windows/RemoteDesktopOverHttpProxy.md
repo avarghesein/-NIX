@@ -58,6 +58,7 @@ Place Holders
           Port 22
           Hostname {server name or fqdn}
           LocalForward 3389 127.0.0.1:3389
+          IdentityFile {User Profile}\.ssh\id_ed25519
 
 Connect through command
     
