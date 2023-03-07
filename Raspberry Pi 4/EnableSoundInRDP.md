@@ -4,6 +4,14 @@ Make XRDP to connect to Local Desktop through X11VNC. Refer [this article for im
 
 This will make the User to login to Local Desktop, Which have the privilage to enable Sound Cards in Pulse Audio
 
+NOTE: If you're using RaspberryPi OS 64bit (Bullseye), You've to downgrade "libvnc.so" module to (0.9.12) in XRDP Package.
+
+[download](http://ports.ubuntu.com/pool/universe/x/xrdp/xrdp_0.9.12-1_arm64.deb)
+
+[xrdp package](https://ubuntu.pkgs.org/20.04/ubuntu-universe-arm64/xrdp_0.9.12-1_arm64.deb.html)
+
+[reference](https://github.com/clearlinux/distribution/issues/2447)
+
 ## Set Custom Screen Resolution in RDP Sessions
 
 [Reference](https://forums.raspberrypi.com/viewtopic.php?t=284866&start=25)
