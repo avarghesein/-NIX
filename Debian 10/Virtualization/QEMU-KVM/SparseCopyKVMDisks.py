@@ -7,8 +7,8 @@ Copies all KVM Sparse Disk files like raw, qcow2 From Source Folder to Destinati
 This script will only copy the sparsely occupied space (On-Disk Size), Which will be much lesser
 than the Original Virtually Allocated Disk Size (File Size).
 
-i.e The Disk File might be Created with a Virtual Size 100G, but might be allocated only 5G.
-In such case only 5G will be copied. If you employ normal CP, rsync commands, The Destination
+i.e The Disk File has Created with a Virtual Size Of 100G, but might have been allocated 5G only.
+In such cases only the 5G will be copied. If you employ normal CP, rsync commands, The Destination
 will hold the entire 100G pre allocated, wasting lot of disk space and takes much longer to complete
 
 The script will report Total Size to Copy, Already Copied Size, and Time Remaining to Copy 
