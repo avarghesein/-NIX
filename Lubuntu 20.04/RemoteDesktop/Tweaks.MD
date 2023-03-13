@@ -1,5 +1,13 @@
 ## XRDP (How to Enable Sound)
 
+Add the below command to ~/.profile
+
+PS: Ensure you can use [sudo without password](https://raspberrytips.com/new-user-on-raspberry-pi/)
+
+    sudo usermod -a -G audio $(whoami)
+
+   **Or**
+
 Build and Install XRDP plugin for Pulse Audio from Source
 
 [Build Reference](https://c-nergy.be/blog/?p=13655)
@@ -7,7 +15,13 @@ Build and Install XRDP plugin for Pulse Audio from Source
 Run [pulseaudio -k](https://askubuntu.com/questions/1228980/trouble-with-audio-in-remote-desktop-session-with-xrdp), from your RDP Session
 
 
-## XRDP (GUI Apps with SUDO)
+## XRDP (GUI Apps with SUDO Or in Shell)
+
+Add the below command to ~/.profile
+
+    xhost +
+
+   **Or**
 
 By default GUI app will compain about lxqt, while invoking as root.
 Setting up proper display parameter will fix this issue.
