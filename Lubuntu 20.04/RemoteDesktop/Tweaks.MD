@@ -21,6 +21,8 @@ Add the below command to ~/.profile
 
     xhost +
 
+[Reference](https://github.com/neutrinolabs/xrdp/issues/787)
+
    **Or**
 
 By default GUI app will compain about lxqt, while invoking as root.
