@@ -2,13 +2,17 @@
 
 [Install 64bit RaspberryPi OS](https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit)
 
-## Use RAMDisk for Resource Demanding Applications
-
-[Migrate and Load User Profiles and Cache from RAMDisk for Brave, Chrome, Vivaldi browsers](https://github.com/avarghesein/-NIX/blob/main/Raspberry%20Pi%204/FastBrowsingWithRamDisk.md)
-
 ## Overclock CPU/GPU to make Pi4 faster
 
 [Overclocking](https://github.com/avarghesein/-NIX/blob/main/Raspberry%20Pi%204/PrimaryDesktopTweak.md)
+
+## Use a High Performance Browser (e.g Brave)
+
+[Download Brave Browser for Arm64. Nightly Builds](https://brave.com/linux/#nightly-channel-installation)
+
+## Use RAMDisk for Resource Demanding Applications
+
+[Migrate and Load User Profiles and Cache from RAMDisk for Brave, Chrome, Vivaldi browsers](https://github.com/avarghesein/-NIX/blob/main/Raspberry%20Pi%204/FastBrowsingWithRamDisk.md)
 
 ## Disable Logging/Journaling to make Pi4 IO faster
 
