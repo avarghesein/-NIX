@@ -2,7 +2,13 @@
 
 Linux|Unix tweaks|optimizations
 
-## Debian 10 (Buster) - Primary OS
+## RaspberryPi4 - Primary OS
+
+![alt RPi4-UX](https://github.com/avarghesein/-NIX/blob/main/Raspberry%20Pi%204/RPi4-UX.png)
+
+[UX/Performance Tweaks](https://github.com/avarghesein/-NIX/tree/main/Raspberry%20Pi%204)
+
+## Debian 10 (Buster)
 
 1. FaceDetection through OpenCV 
 2. RDP Tweaks for connecting to an already existing Local Session
