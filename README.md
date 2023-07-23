@@ -10,7 +10,7 @@ Linux|Unix tweaks|optimizations
 
 ## Lubuntu 22.04 - Desktop OS
 
-![alt UX](https://github.com/avarghesein/-NIX/blob/main/Lubuntu%2022.04/Lubuntu%2020.04-21%20Apr%2022.png)
+![alt UX](https://github.com/avarghesein/-NIX/blob/main/Lubuntu%2022.04/Lubuntu%2022.04-21%20Apr%2022.png)
 
 [Net Config](https://github.com/avarghesein/-NIX/blob/main/Lubuntu%2022.04/Networks.md)
 
