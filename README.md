@@ -8,6 +8,12 @@ Linux|Unix tweaks|optimizations
 
 [UX/Performance Tweaks](https://github.com/avarghesein/-NIX/tree/main/Raspberry%20Pi%204)
 
+## Lubuntu 22.04 - Desktop OS
+
+![alt UX](https://github.com/avarghesein/-NIX/blob/main/Lubuntu%2022.04/Lubuntu%2020.04-21%20Apr%2022.png)
+
+[Net Config](https://github.com/avarghesein/-NIX/blob/main/Lubuntu%2022.04/Networks.md)
+
 ## Debian 10 (Buster)
 
 1. FaceDetection through OpenCV 
