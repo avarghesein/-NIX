@@ -65,6 +65,42 @@
   [Reference](https://virtio-fs.gitlab.io/howto-windows.html)
 
 
+ ### 4. VirtioFS Mounting in Ubuntu Guest
 
+  #### Host
+  Add VirtioFS Device in VM Settings (Virtual Machine Manager)
+  
+  NB: virtio-9p driver with "mapped" accessmode, will be most reliable in terms of file/folder permission settings with guest
+  (specifically chown commands from guest), compared to "passthrough" mode or virtiofs driver with "passthrough" mode (though 
+  the latter is much faster).
+
+    <filesystem type="mount" accessmode="mapped">
+        <driver type="path" wrpolicy="immediate"/>
+        <source dir="/media/DATA/VIRTUALzDATA/KVM/LINUX-VPC"/>
+        <target dir="VPC-DATA"/>
+        <address type="pci" domain="0x0000" bus="0x00" slot="0x0d" function="0x0"/>
+    </filesystem>
+    
+    <memoryBacking>
+      <source type="memfd"/>
+      <access mode="shared"/>
+    </memoryBacking>
+
+  #### Guest
+  1. Load the following modules through /etc/modules
+
+    loop
+    virtio
+    9p
+    9pnet
+    9pnet_virtio
+     
+  2. In /etc/fstab, mount the VirtioFS mount using 9p driver
+
+    VPC-DATA    /media/VPC-DATA    9p    trans=virtio,rw,version=9p2000.L    0    0
+
+  Or through command line
+
+    sudo mount -t 9p -otrans=virtio,rw,version=9p2000.L  VPC-DATA /media/VPC-DATA
 
   
