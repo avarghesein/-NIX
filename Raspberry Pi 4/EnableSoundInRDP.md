@@ -1,3 +1,12 @@
+## Ensure User has been in right Groups
+## Esnure Display Manager has been unlinked from Pulse Sink During Remote Sessions
+e.g. 
+
+    $ UnlinkPulseSinkFromDM.sh "lightdm"
+    $ LinkPulseSinkWithRemoteSession.sh "lightdm"
+        
+[Reference](https://github.com/avarghesein/-NIX/blob/main/Lubuntu%2022.04/BluetoothAudioWithRemoteSession.md)
+
 ## Configure XRDP Connect to Local Desktop Session Through X11VNC
 
 Make XRDP to connect to Local Desktop through X11VNC. Refer [this article for implementation](https://github.com/avarghesein/-NIX/blob/main/Debian%2010/RemoteDesktop/RDP_TO_LOCAL%20SESSION.md#setup-x11vnc-to-run-with-login-screen-lightdm)
