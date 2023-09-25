@@ -27,8 +27,7 @@ e.g. For LightDM Display Manager
     sudo test ! -s $dm_home/.config/pulse/client.conf && printf "autospawn = no\ndaemon-binary = /bin/true\n" | \
     sudo -u $displayManager tee $dm_home/.config/pulse/client.conf
     
-    sudo -u $displayManager ln -vs /dev/null $dm_home/.config/systemd/user/pulseaudio.socket \
-    '/var/lib/$displayManager/.config/systemd/user/pulseaudio.socket' -> '/dev/null'
+    sudo -u $displayManager ln -vs /dev/null $dm_home/.config/systemd/user/pulseaudio.socket
     
     sudo reboot
 
